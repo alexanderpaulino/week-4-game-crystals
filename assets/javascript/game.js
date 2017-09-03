@@ -4,7 +4,7 @@ var losses = 0;
 var computerScore = Math.floor(Math.random()*102+19);
 
 // Utilized different pools of possible numbers so they'd always be between 1-12 without repeats. 
-// The instructions ask to have 1 as a possible number...but that would result in a permanent win state...
+// The instructions ask to have 1 as a possible number...but that could result in a permanent win state...
 var redCrystal = Math.floor(Math.random()*3+10);
 var blueCrystal = Math.floor(Math.random()*3+4);
 var greenCrystal = Math.floor(Math.random()*3+7);
