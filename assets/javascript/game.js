@@ -17,11 +17,9 @@ console.log("The value of the Blue Crystal is " + blueCrystal);
 console.log("The value of the Green Crystal is " + greenCrystal);
 console.log("The value of the Yellow Crystal is " + yellowCrystal);
 
- $(".rButton").on("click", function() {
- 	userScore += redCrystal;
- 	$("#userScore").html(userScore);
+function crystalGame() {
 
- 	if ((computerScore === userScore)) {
+	if ((computerScore === userScore)) {
  		++wins;
 	  	alert("You win! How many wins can you get with this crystal set?");
 	  	computerScore = Math.floor(Math.random()*102+19);
@@ -49,106 +47,28 @@ console.log("The value of the Yellow Crystal is " + yellowCrystal);
 	  	userScore = 0;
 	  	$("#userScore").html(userScore);
   	}
+}
+
+ $(".rButton").on("click", function() {
+ 	userScore += redCrystal;
+ 	$("#userScore").html(userScore);
+ 	crystalGame()
  });
 
   $(".bButton").on("click", function() {
   	userScore += blueCrystal;
  	$("#userScore").html(userScore);
-
- 	if ((computerScore === userScore)) {
- 		++wins;
-	  	alert("You win! How many wins can you get with this crystal set?");
-	  	computerScore = Math.floor(Math.random()*102+19);
-	  	$("#wins").html("Wins: " + wins);
-	  	userScore = 0;
-	  	$("#cpuScore").html(computerScore);
-	  	$("#userScore").html(userScore);
-  	}
-
-	if ((userScore >= computerScore)) {
-  	losses++;
-  	alert("You lose! Try again with new crystal values and a new computer score to match!");
-  	computerScore = Math.floor(Math.random()*102+19);
-  	$("#cpuScore").html(computerScore);
-  	redCrystal = Math.floor(Math.random()*3+10);
-	blueCrystal = Math.floor(Math.random()*3+4);
-	greenCrystal = Math.floor(Math.random()*3+7);
-	yellowCrystal = Math.floor(Math.random()*3+1);
-	console.log("-----------------------------------");
-	console.log("The new value of the Red Crystal is " + redCrystal);
-	console.log("The new value of the Blue Crystal is " + blueCrystal);
-	console.log("The new value of the Green Crystal is " + greenCrystal);
-	console.log("The new value of the Yellow Crystal is " + yellowCrystal);
-  	$("#losses").html("Losses: " + losses);
-  	userScore = 0;
-  	$("#userScore").html(userScore);
-  }
+ 	crystalGame()
  });
 
   $(".gButton").on("click", function() {
   	userScore += greenCrystal;
  	$("#userScore").html(userScore);
-
- 	if ((computerScore === userScore)) {
- 		++wins;
-	  	alert("You win! How many wins can you get with this crystal set?");
-	  	computerScore = Math.floor(Math.random()*102+19);
-	  	$("#wins").html("Wins: " + wins);
-	  	userScore = 0;
-	  	$("#cpuScore").html(computerScore);
-	  	$("#userScore").html(userScore);
-  	}
-
-	if ((userScore >= computerScore)) {
-	  	losses++;
-	  	alert("You lose! Try again with new crystal values and a new computer score to match!");
-	  	computerScore = Math.floor(Math.random()*102+19);
-	  	$("#cpuScore").html(computerScore);
-	  	redCrystal = Math.floor(Math.random()*3+10);
-		blueCrystal = Math.floor(Math.random()*3+4);
-		greenCrystal = Math.floor(Math.random()*3+7);
-		yellowCrystal = Math.floor(Math.random()*3+1);
-		console.log("-----------------------------------");
-		console.log("The new value of the Red Crystal is " + redCrystal);
-		console.log("The new value of the Blue Crystal is " + blueCrystal);
-		console.log("The new value of the Green Crystal is " + greenCrystal);
-		console.log("The new value of the Yellow Crystal is " + yellowCrystal);
-	  	$("#losses").html("Losses: " + losses);
-	  	userScore = 0;
-	  	$("#userScore").html(userScore);
-  }
+ 	crystalGame()
  });
 
   $(".yButton").on("click", function() {
   	userScore += yellowCrystal;
  	$("#userScore").html(userScore);
-
-	if ((computerScore === userScore)) {
- 		++wins;
-	  	alert("You win! How many wins can you get with this crystal set?");
-	  	computerScore = Math.floor(Math.random()*102+19);
-	  	$("#wins").html("Wins: " + wins);
-	  	userScore = 0;
-	  	$("#cpuScore").html(computerScore);
-	  	$("#userScore").html(userScore);
-  	}
-
-	if ((userScore >= computerScore)) {
-	  	losses++;
-	  	alert("You lose! Try again with new crystal values and a new computer score to match!");
-	  	computerScore = Math.floor(Math.random()*102+19);
-	  	$("#cpuScore").html(computerScore);
-	  	redCrystal = Math.floor(Math.random()*3+10);
-		blueCrystal = Math.floor(Math.random()*3+4);
-		greenCrystal = Math.floor(Math.random()*3+7);
-		yellowCrystal = Math.floor(Math.random()*3+1);
-		console.log("-----------------------------------");
-		console.log("The new value of the Red Crystal is " + redCrystal);
-		console.log("The new value of the Blue Crystal is " + blueCrystal);
-		console.log("The new value of the Green Crystal is " + greenCrystal);
-		console.log("The new value of the Yellow Crystal is " + yellowCrystal);
-	  	$("#losses").html("Losses: " + losses);
-	  	userScore = 0;
-	  	$("#userScore").html(userScore);
-  }
+ 	crystalGame()
  });
