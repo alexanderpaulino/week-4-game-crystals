@@ -5,10 +5,10 @@ var computerScore = Math.floor(Math.random()*102+19);
 
 // I would have recommended that the floor be 2 since a crystal value of 1 can result in a permanent win state, but...
 
-var redCrystal = Math.floor(Math.random()*11+1);
-var blueCrystal = Math.floor(Math.random()*11+1);
-var greenCrystal = Math.floor(Math.random()*11+1);
-var yellowCrystal = Math.floor(Math.random()*11+1);
+var redCrystal = Math.floor(Math.random()*12+1);
+var blueCrystal = Math.floor(Math.random()*12+1);
+var greenCrystal = Math.floor(Math.random()*12+1);
+var yellowCrystal = Math.floor(Math.random()*12+1);
 
 $("#cpuScore").html(computerScore);
 
