@@ -52,6 +52,7 @@ function crystalGame() {
 	  	$("#userScore").html(userScore);
 	  	crystalCheck();
 	  	crystalCheck();
+	  	crystalCheck();
   	}
 }
 
